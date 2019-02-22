@@ -17,21 +17,23 @@ namespace GradeBook.GradeBooks
                 throw new InvalidOperationException("Ranked grading requires five or more students");
             var studentGradeOrder = Students.OrderByDescending(e => e.AverageGrade).ToList();
             var studentPercential = averageGrade / Students.Count;
-            foreach (var pupil in Students)
+            int count = 0;
+            foreach (var pupil in studentGradeOrder)
             {
-                if (pupil.AverageGrade >= (averageGrade - studentPercential))
+                count += 1;
+                if (count <= 2 * (studentGradeOrder.Count / 5))
                 {
                     return 'A';
                 }
-                else if (pupil.AverageGrade >= (averageGrade - 30 * studentPercential))
+                else if (count <= 4 * (studentGradeOrder.Count / 5))
                 {
                     return 'B';
                 }
-                else if (pupil.AverageGrade >= (averageGrade - 4 * studentPercential))
+                else if (count <= 6 * (studentGradeOrder.Count / 5))
                 {
                     return 'C';
                 }
-                else if (pupil.AverageGrade >= (averageGrade - 5 * studentPercential))
+                else if (count <= 8 * (studentGradeOrder.Count / 5))
                 {
                     return 'D';
                 }
