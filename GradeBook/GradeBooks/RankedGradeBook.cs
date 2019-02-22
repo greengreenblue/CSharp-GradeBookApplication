@@ -17,7 +17,7 @@ namespace GradeBook.GradeBooks
                 throw new InvalidOperationException("Ranked grading requires five or more students");
             var studentGradeOrder = Students.OrderByDescending(e => e.AverageGrade).ToList();
             var studentPercential = averageGrade / Students.Count;
-            foreach (var pupil in studentGradeOrder)
+            foreach (var pupil in Students)
             {
                 if (pupil.AverageGrade >= (averageGrade - studentPercential))
                 {
