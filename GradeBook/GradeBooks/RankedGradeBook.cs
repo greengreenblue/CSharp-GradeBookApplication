@@ -37,7 +37,7 @@ namespace GradeBook.GradeBooks
                 //}
                 //else
                 //{
-                    return 'F';
+                    return 'A';
                 //}
             }
             
