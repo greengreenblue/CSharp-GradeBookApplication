@@ -23,7 +23,7 @@ namespace GradeBook.GradeBooks
                 {
                     return 'A';
                 }
-                else if (pupil.AverageGrade >= (averageGrade - 3 * studentPercential))
+                else if (pupil.AverageGrade >= (averageGrade - 30 * studentPercential))
                 {
                     return 'B';
                 }
