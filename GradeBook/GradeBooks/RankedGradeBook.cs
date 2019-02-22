@@ -21,19 +21,19 @@ namespace GradeBook.GradeBooks
             foreach (var pupil in studentGradeOrder)
             {
                 count += 1;
-                if (count <= (studentGradeOrder.Count / 5))
+                if (count <= studentGradeOrder.Count * .2)
                 {
                     return 'A';
                 }
-                else if (count <= 2 * (studentGradeOrder.Count / 5))
+                else if (count <= studentGradeOrder.Count * .4)
                 {
                     return 'B';
                 }
-                else if (count <= 3 * (studentGradeOrder.Count / 5))
+                else if (count <= studentGradeOrder.Count * .6)
                 {
                     return 'C';
                 }
-                else if (count <= 3 * (studentGradeOrder.Count / 5))
+                else if (count <= studentGradeOrder.Count * .8)
                 {
                     return 'D';
                 }
