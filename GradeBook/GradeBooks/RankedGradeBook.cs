@@ -19,28 +19,28 @@ namespace GradeBook.GradeBooks
             var studentPercential = averageGrade / Students.Count;
             foreach (var pupil in Students)
             {
-                //if (pupil.AverageGrade >= (averageGrade - studentPercential))
-                //{
-                //    return 'A';
-                //}
-                //else if (pupil.AverageGrade >= (averageGrade - 2 * studentPercential))
-                //{
-                //    return 'B';
-                //}
-                //else if (pupil.AverageGrade >= (averageGrade - 3 * studentPercential))
-                //{
-                //    return 'C';
-                //}
-                //else if (pupil.AverageGrade >= (averageGrade - 4 * studentPercential))
-                //{
-                //    return 'D';
-                //}
-                //else
-                //{
+                if (pupil.AverageGrade >= (averageGrade - studentPercential))
+                {
                     return 'A';
-                //}
+                }
+                else if (pupil.AverageGrade >= (averageGrade - 2 * studentPercential))
+                {
+                    return 'B';
+                }
+                else if (pupil.AverageGrade >= (averageGrade - 3 * studentPercential))
+                {
+                    return 'C';
+                }
+                else if (pupil.AverageGrade >= (averageGrade - 4 * studentPercential))
+                {
+                    return 'D';
+                }
+                else
+                {
+                    return 'A';
+                }
             }
-            
+
 
             return base.GetLetterGrade(averageGrade);
         }
