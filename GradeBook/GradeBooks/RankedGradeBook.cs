@@ -40,6 +40,7 @@ namespace GradeBook.GradeBooks
                     return 'A';
                 }
             }
+            return 'F';
         }
     }
 }
