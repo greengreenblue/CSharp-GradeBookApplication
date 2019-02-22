@@ -23,15 +23,15 @@ namespace GradeBook.GradeBooks
                 {
                     return 'A';
                 }
-                else if (pupil.AverageGrade >= (averageGrade - 2 * studentPercential))
+                else if (pupil.AverageGrade >= (averageGrade - 3 * studentPercential))
                 {
                     return 'B';
                 }
-                else if (pupil.AverageGrade >= (averageGrade - 3 * studentPercential))
+                else if (pupil.AverageGrade >= (averageGrade - 4 * studentPercential))
                 {
                     return 'C';
                 }
-                else if (pupil.AverageGrade >= (averageGrade - 4 * studentPercential))
+                else if (pupil.AverageGrade >= (averageGrade - 5 * studentPercential))
                 {
                     return 'D';
                 }
